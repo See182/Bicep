@@ -1,0 +1,99 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "_artifactsLocation": {
+      "value": "[deployment().properties.templateLink.uri]"
+    },
+    "_artifactsLocationSasToken": {
+      "value": null
+    },
+    "vmName": {
+      "value": "XG-Firewall"
+    },
+    "adminPassword": {
+      "value": null
+    },
+    "imageSku": {
+      "value": "byol"
+    },
+    "vmSize": {
+      "value": "Standard_F2s_v2"
+    },
+    "netNewOrExisting": {
+      "value": "new"
+    },
+    "netRG": {
+      "value": "[resourceGroup().name]"
+    },
+    "netName": {
+      "value": "VNET"
+    },
+    "netPrefix": {
+      "value": "10.0.0.0/16"
+    },
+    "wanName": {
+      "value": "WAN"
+    },
+    "wanPrefix": {
+      "value": "10.0.1.0/24"
+    },
+    "lanName": {
+      "value": "LAN"
+    },
+    "lanPrefix": {
+      "value": "10.0.2.0/24"
+    },
+    "publicIpNewOrExisting": {
+      "value": "new"
+    },
+    "publicIpRG": {
+      "value": "[resourceGroup().name]"
+    },
+    "publicIpName": {
+      "value": "PublicIP"
+    },
+    "publicIpDNS": {
+      "value": null
+    },
+    "publicIpType": {
+      "value": "Dynamic"
+    },
+    "storageNewOrExisting": {
+      "value": "new"
+    },
+    "storageRG": {
+      "value": "[resourceGroup().name]"
+    },
+    "storageName": {
+      "value": null
+    },
+    "storageType": {
+      "value": "Standard_LRS"
+    },
+    "nicWan": {
+      "value": "PortB"
+    },
+    "nicLan": {
+      "value": "PortA"
+    },
+    "networkSecurityGroupNewOrExisting": {
+      "value": "new"
+    },
+    "networkSecurityGroupName": {
+      "value": "SecurityGroup"
+    },
+    "trustedNetwork": {
+      "value": "*"
+    },
+    "availabilitySetNewOrExisting": {
+      "value": "new"
+    },
+    "availabilitySetName": {
+      "value": "AvailabilitySet"
+    },
+    "location": {
+      "value": "[resourceGroup().location]"
+    }
+  }
+}
